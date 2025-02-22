@@ -1,4 +1,4 @@
-html, body {
+html{
     font-family: 'Helvetica Neue', Arial, sans-serif;
     background: #f7f7f7;
     margin: 0;
@@ -9,6 +9,37 @@ html, body {
     height: 100%;
 }
 
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+#allPage{
+    margin-left: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+#bodyRightSide {
+    border: 1px solid rgb(72, 255, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 1200px;
+    width: 90%;
+    padding-left: 50px;
+
+}
+
+
 header {
     background: #005A9C; 
     color: white;
@@ -17,6 +48,7 @@ header {
     text-align:left;
     font-weight: bold;
     padding-bottom: 30px;
+    height: px;
 }
 
 footer{
@@ -51,39 +83,42 @@ h1 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-#sugeridos, #feed {
+#sugeridos{
     border: 1px solid red;
     padding: 20px;
     background: white;
-    margin: 20px auto;
     border-radius: 10px;
     width: 90%;
     max-width: 1200px;
+    height: 80%;
 }
+
 
 #intereses{
     border: 1px solid red;
     padding: 20px;
     background: white;
-    margin: 20px auto;
     border-radius: 10px;
     width: 90%;
     max-width: 1200px;
     text-align: right;
+    height: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 #publicar{
     border: 1px solid red;
     padding: 20px;
     background: white;
-    margin: 20px auto;
     border-radius: 10px;
     width: 90%;
     max-width: 1200px;
     text-align: left;
-    height: 25%;
+    height: 300px;
     display: flex;
-    align-items:flex-end;
+    align-items: flex-end;
     justify-content: space-between;
 }
 
@@ -94,13 +129,12 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-bottom: 30px;
 }
 
 .shareText{
     border-radius: 10px;
-    background-color: rgb(214, 214, 214);
-    height: 80%;
+    background-color: rgb(228, 228, 228);
+    height: 60%;
     border: none;
 }
 
@@ -108,7 +142,7 @@ h1 {
 #intereses h2, #sugeridos h2, #feed h2, #publicar h2 {
     font-size: 1.8rem;
     color: #333;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 
@@ -123,14 +157,16 @@ h1 {
     flex:1;
 }
 .tags {
+    border: 1px solid red;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
     gap: 10px;
 }
 
-.tag{
-    border: 1px solid red;
+
+
+.tag, .tagPublicar, .shareButton {
     background: #005A9C;
     color: white;
     border: none;
@@ -139,17 +175,18 @@ h1 {
     cursor: pointer;
 }
 
-.tagPublicar {
-    background: #005A9C;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 20px;
-    cursor: pointer;
-}
-
-.tag:hover, .tagPublicar:hover {
+.tag:hover, .tagPublicar:hover, .shareButton:hover {
     background: #003F6C;
+}
+
+
+#feed {
+    border: 1px solid red;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    width: 250px;
+    max-height: 1200px;
 }
 
 .eventos {
@@ -165,7 +202,7 @@ h1 {
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    width: 280px; 
+    width: 230px; 
     text-align: center;
     transition: transform 0.3s ease-in-out;
 }

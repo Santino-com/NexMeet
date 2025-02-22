@@ -23,45 +23,61 @@
                 <p id="user">Nombre Usuario</p>
             </div>
         </header>
-    
-        <section id="intereses">
-            <h2>¿Qué te interesa?</h2>
-            <div class="tags">
-                <button class="tag" data-category="deportes">Deportes</button>
-                <button class="tag" data-category="musica">Música</button>
-                <button class="tag" data-category="arte">Arte</button>
-                <button class="tag" data-category="tecnologia">Tecnología</button>
-                <button class="tag" data-category="viajes">Viajes</button>
-                <button class="tag" data-category="gastronomia">Gastronomía</button>
-            </div>
-        </section>
 
-        <section id="publicar">
-            <form class="shareBox">
-                <h2>Comparte tu evento</h2>
-                <input type="text" class="shareText">
-            </form>
-            <button class="tagPublicar">Publicar   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-                <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
-            </svg></button>
+        <div id="allPage">
+            <section id="bodyRightSide">
+                <section id="intereses">
+                    <h2>¿Qué te interesa?</h2>
+                    <div class="tags">
+                        <button class="tag" data-category="deportes">Deportes</button>
+                        <button class="tag" data-category="musica">Música</button>
+                        <button class="tag" data-category="arte">Arte</button>
+                        <button class="tag" data-category="tecnologia">Tecnología</button>
+                        <button class="tag" data-category="viajes">Viajes</button>
+                        <button class="tag" data-category="gastronomia">Gastronomía</button>
+                    </div>
+                </section>
+        
+                <section id="publicar">
+                    <form class="shareBox">
+                        <h2>Comparte tu evento</h2>
+                        <input type="text" class="shareText">
+                        <nav>
+                            <ul>
+                                <li><button type="button" class="shareButton"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-paperclip" viewBox="0 0 16 16">
+                                    <path d="M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0z"/>
+                                  </svg></button></li>
+                                <li><button type="button" class="shareButton"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+                                    <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/>
+                                  </svg></button></li>
+                            </ul>
+                        </nav>
+                    </form>
+                    <button class="tagPublicar"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-upload" viewBox="0 0 16 16">
+                        <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+                        <path d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708z"/>
+                      </svg></button>
+        
+                </section>
+            
+                <section id="sugeridos">
+                    <h2>Para ti</h2>
+                    <div class="eventos" id="eventos-sugeridos">
+                        <!-- Aquí se cargarán eventos dinámicamente -->
+                    </div>
+                </section>
+    
+       
+            </section>
+            <section id="feed">
+                <h2>Próximos eventos</h2>
+                <div class="eventos" id="eventos-feed">
+                    <!-- Aquí se insertarán eventos dinámicamente -->
+                </div>
+            </section>
 
-        </section>
-    
-        <section id="sugeridos">
-            <h2>Sugerencias para ti</h2>
-            <div class="eventos" id="eventos-sugeridos">
-                <!-- Aquí se cargarán eventos dinámicamente -->
-            </div>
-        </section>
-    
-        <section id="feed">
-            <h2>Próximos eventos</h2>
-            <div class="eventos" id="eventos-feed">
-                <!-- Aquí se insertarán eventos dinámicamente -->
-            </div>
-        </section>
-    
+        </div>
+
         <footer>
             <h3>Gracias por visitar nuestra pagina</h3>
             <p>Todos los derechos reservados</p>

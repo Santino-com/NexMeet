@@ -2,10 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const eventos = [
         { id: 1, categoria: "deportes", titulo: "Torneo de Baloncesto", img: "../IMG/deporte.jpg" },
         { id: 2, categoria: "musica", titulo: "Concierto Rock", img: "../IMG/musica.jpg" },
-        { id: 3, categoria: "arte", titulo: "Exposición de Arte", img: "../IMG/arte.jpg" },
-        { id: 4, categoria: "tecnologia", titulo: "Hackathon Tech", img: "../IMG/tecnologia.jpg" },
-        { id: 5, categoria: "viajes", titulo: "Meetup de Viajeros", img: "../IMG/viajes.jpg" },
-        { id: 6, categoria: "gastronomia", titulo: "Feria Gastronómica", img: "../IMG/gastronomia.jpg" }
+        { id: 3, categoria: "arte", titulo: "Exposición de Arte", img: "../IMG/arte.jpg" }
     ];
 
     const eventosFeed = document.getElementById("eventos-feed");
