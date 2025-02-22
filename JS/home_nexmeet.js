@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
 
     const eventosFeed = document.getElementById("eventos-feed");
-    const eventosSugeridos = document.getElementById("eventos-sugeridos");
     const tags = document.querySelectorAll(".tag");
 
     // Cargar todos los eventos inicialmente
