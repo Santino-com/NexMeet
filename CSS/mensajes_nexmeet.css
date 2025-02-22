@@ -90,7 +90,7 @@ nav ul li a {
 
 .msgBox{
     border: 1px solid red;
-    height: 85%;
+    height: 90%;
     width: 80%;
     display: flex;
     flex-direction: column;
@@ -102,8 +102,17 @@ nav ul li a {
 
 .textMsg{
     border: 1px solid red;
-    height: 70%;
+    height: 90%;
     width: 90%;
     background: #f7f7f7;
     border-radius: 30px;
+}
+
+.friendsContainer{
+    border: 1px solid red;
+    height: 70%;
+    width: 80%;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #f7f7f7;
 }

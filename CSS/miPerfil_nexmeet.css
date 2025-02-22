@@ -65,7 +65,7 @@ nav ul li a {
 }
 
 .userContainer{
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    background: #c0e2fa;
     border: 1px solid red;
     display: flex;
     flex-direction: column;
@@ -79,7 +79,7 @@ nav ul li a {
 }
 
 .userInfo{
-    color: white;
+    color: rgb(0, 0, 0);
     font-family: 'Courier New', Courier, monospace; /*Opcion pa futuro, poner un botoncito pa editar valores*/
     font-size: 20px;
     font-weight: bold;
