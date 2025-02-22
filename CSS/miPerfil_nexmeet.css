@@ -1,0 +1,95 @@
+html, body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: #005A9C; 
+    color: white;
+    padding-left: 350px;
+    padding-top: 10px;
+    text-align:left;
+    font-weight: bold;
+    padding-bottom: 30px;
+}
+
+footer{
+    background: #005A9C;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+
+h1 {
+    font-size: 4rem;
+    letter-spacing: 10px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: normal;
+
+}
+
+.profile {
+    position: absolute;
+    top:70px;
+    right:20vw; 
+}
+
+#content {
+    height: 700px;
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.userContainer{
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    box-shadow: 2px 0px 10px 5px #000000;
+    border-radius: 10px;
+    height: 100%;
+    width: 20%;
+    padding-top: 5px;
+}
+
+.userInfo{
+    color: white;
+    font-family: 'Courier New', Courier, monospace; /*Opcion pa futuro, poner un botoncito pa editar valores*/
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px;
+}
+
+.userImg{
+    border: 1px solid red; /*Continer pa poner la focking image*/
+    height: 80%;
+    width: 80%;
+    border-radius: 10px;
+}
+

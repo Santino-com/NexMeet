@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexMeet - Inicio</title>
+    <link rel="stylesheet" href="../CSS/inicio_nexmeet.css">
+</head>
+<body>
+    <section class="content">
+        <header>
+            <h1>NexMeet</h1>
+            <nav>
+                <ul>
+                    <li><a href="inicio.html">Inicio</a></li>
+                    <li><a href="mensajes.html">Mensajes</a></li>
+                    <li><a href="miPerfil.html">Mi Perfil</a></li>
+                    <li><a href="reportes.html">Reportes</a></li>
+                </ul>
+            </nav>
+            <div class="profile">
+                <p id="name">Nombre completo</p>
+                <p id="user">Nombre Usuario</p>
+            </div>
+        </header>
+    
+        <section id="intereses">
+            <h2>¿Qué te interesa?</h2>
+            <div class="tags">
+                <button class="tag" data-category="deportes">Deportes</button>
+                <button class="tag" data-category="musica">Música</button>
+                <button class="tag" data-category="arte">Arte</button>
+                <button class="tag" data-category="tecnologia">Tecnología</button>
+                <button class="tag" data-category="viajes">Viajes</button>
+                <button class="tag" data-category="gastronomia">Gastronomía</button>
+            </div>
+        </section>
+
+        <section id="publicar">
+            <form class="shareBox">
+                <h2>Comparte tu evento</h2>
+                <input type="text" class="shareText">
+            </form>
+            <button class="tagPublicar">Publicar   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+            </svg></button>
+
+        </section>
+    
+        <section id="sugeridos">
+            <h2>Sugerencias para ti</h2>
+            <div class="eventos" id="eventos-sugeridos">
+                <!-- Aquí se cargarán eventos dinámicamente -->
+            </div>
+        </section>
+    
+        <section id="feed">
+            <h2>Próximos eventos</h2>
+            <div class="eventos" id="eventos-feed">
+                <!-- Aquí se insertarán eventos dinámicamente -->
+            </div>
+        </section>
+    
+        <footer>
+            <h3>Gracias por visitar nuestra pagina</h3>
+            <p>Todos los derechos reservados</p>
+        </footer>
+    
+
+    </section>
+
+    <script src="../JS/home_nexmeet.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+html, body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: #005A9C; 
+    color: white;
+    padding-left: 350px;
+    padding-top: 10px;
+    text-align:left;
+    font-weight: bold;
+    padding-bottom: 30px;
+}
+
+footer{
+    background: #005A9C;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+
+h1 {
+    font-size: 4rem;
+    letter-spacing: 10px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.rightSide h2 {
+    font-size: 2.9rem;
+    color: #333;
+}
+
+#msgText{
+    height: 45px;
+    width: 90%;
+    border-radius: 20px;
+}
+
+
+.profile {
+    border: 1px solid red;
+    position: absolute;
+    top:70px;
+    right:20vw; 
+}
+
+.content {
+    border: 1px solid rgb(0, 255, 191);
+    background: white;
+    margin: 20px auto;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 1200px;
+    height: 800px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-content:baseline;
+    justify-content: space-between;
+}
+
+.rightSide{
+    border: 1px solid red;
+    height: 85%;
+    width: 30%;
+    justify-items: center;
+}
+
+.msgBox{
+    border: 1px solid red;
+    height: 85%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.textMsg{
+    border: 1px solid red;
+    height: 70%;
+    width: 90%;
+    background: #f7f7f7;
+    border-radius: 30px;
+}
