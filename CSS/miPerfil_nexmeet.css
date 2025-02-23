@@ -57,14 +57,14 @@ nav ul li a {
 
 #content {
     height: 700px;
-    border: 1px solid red;
+      /*border: 1px solid red;*/
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 50px;
 }
 .actividad{
-    border: 1px solid green;
+      /*border: 1px solid red;*/
     border-radius: 10px;
     height: 80%;
     width: 20%;
@@ -83,6 +83,7 @@ nav ul li a {
 }
 
 .comments{
+    background-color: #dfdfdf;
     padding: 15px;
     color: rgb(0, 0, 0);
     font-family: 'Courier New', Courier, monospace; /*Opcion pa futuro, poner un botoncito pa editar valores*/
@@ -91,7 +92,7 @@ nav ul li a {
 
 .userContainer{
     background: #c0e2fa;
-    border: 1px solid red;
+      /*border: 1px solid red;*/
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -111,7 +112,7 @@ nav ul li a {
 }
 
 .userImg{
-    border: 1px solid red; /*Continer pa poner la focking image*/
+      /*border: 1px solid red;*/ /*Continer pa poner la focking image*/
     height: 80%;
     width: 60%;
     border-radius: 10px;

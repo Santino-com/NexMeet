@@ -61,14 +61,14 @@ nav ul li a {
 
 
 .profile {
-    border: 1px solid red;
+      /*border: 1px solid red;*/
     position: absolute;
     top:70px;
     right:20vw; 
 }
 
 .content {
-    border: 1px solid rgb(0, 255, 191);
+      /*border: 1px solid red;*/
     background: white;
     margin: 20px auto;
     border-radius: 10px;
@@ -82,14 +82,14 @@ nav ul li a {
 }
 
 .rightSide{
-    border: 1px solid red;
+      /*border: 1px solid red;*/
     height: 85%;
     width: 30%;
     justify-items: center;
 }
 
 .msgBox{
-    border: 1px solid red;
+      /*border: 1px solid red;*/
     height: 90%;
     width: 80%;
     display: flex;
@@ -101,7 +101,7 @@ nav ul li a {
 }
 
 .textMsg{
-    border: 1px solid red;
+      /*border: 1px solid red;*/
     height: 90%;
     width: 90%;
     background: #f7f7f7;
@@ -109,10 +109,13 @@ nav ul li a {
 }
 
 .friendsContainer{
-    border: 1px solid red;
+      /*border: 1px solid red;*/
     height: 70%;
     width: 80%;
-    text-align: center;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-around;
+    align-items: center;
     border-radius: 20px;
     background-color: #f7f7f7;
 }

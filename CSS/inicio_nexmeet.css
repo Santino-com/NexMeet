@@ -29,7 +29,7 @@ body {
 }
 
 #bodyRightSide {
-    border: 1px solid rgb(72, 255, 0);
+      /*border: 1px solid red;*/
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -60,7 +60,7 @@ footer{
 
 
 nav ul {
-    border: 1px solid red;
+      /*border: 1px solid red;*/
     list-style: none;
     padding: 0;
 }
@@ -84,7 +84,7 @@ h1 {
 }
 
 #sugeridos{
-    border: 1px solid red;
+      /*border: 1px solid red;*/
     padding: 20px;
     background: white;
     border-radius: 10px;
@@ -95,7 +95,7 @@ h1 {
 
 
 #intereses{
-    border: 1px solid red;
+      /*border: 1px solid red;*/
     padding: 20px;
     background: white;
     border-radius: 10px;
@@ -109,7 +109,7 @@ h1 {
 }
 
 #publicar{
-    border: 1px solid red;
+      /*border: 1px solid red;*/
     padding: 20px;
     background: white;
     border-radius: 10px;
@@ -123,7 +123,7 @@ h1 {
 }
 
 .shareBox{
-    border: 1px solid red;
+      /*border: 1px solid red;*/
     width: 90%;
     height: 90%;
     display: flex;
@@ -147,7 +147,7 @@ h1 {
 
 
 .profile {
-    border: 1px solid red;
+      /*border: 1px solid red;*/
     position: absolute;
     top:70px;
     right:20vw; 
@@ -157,7 +157,7 @@ h1 {
     flex:1;
 }
 .tags {
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
@@ -181,7 +181,7 @@ h1 {
 
 
 #feed {
-    border: 1px solid red;
+      /*border: 1px solid red;*/
     padding: 20px;
     background: white;
     border-radius: 10px;
@@ -197,7 +197,7 @@ h1 {
 }
 
 .evento {
-    border: 1px solid red;
+      /*border: 1px solid red;*/
     background: white;
     padding: 15px;
     border-radius: 10px;

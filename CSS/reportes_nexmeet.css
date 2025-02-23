@@ -52,7 +52,7 @@ nav ul li a {
 
 
 #userReports ul{
-    border: 1px solid red;
+      /*border: 1px solid red;*/
     list-style: none;
     padding: 20px;
 }
@@ -74,7 +74,7 @@ nav ul li a {
 }
 
 #leftContainer ul{
-    border: 1px solid green;
+      /*border: 1px solid red;*/
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -113,7 +113,7 @@ nav ul li a {
 }
 
 .leftNav{
-    border: 1px solid red;
+      /*border: 1px solid red;*/
     height: 100vh;
     width: 20%;
     padding: 30px;
@@ -121,7 +121,7 @@ nav ul li a {
 }
 
 .rightContainer{
-    border: 1px solid red;
+      /*border: 1px solid red;*/
     width: 100%;
     height: 100vh;
 }
