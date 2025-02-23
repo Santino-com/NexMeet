@@ -1,6 +1,6 @@
 html, body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    background: #f7f7f7;
+    background: #b4b4b4;
     margin: 0;
     padding: 0;
     color: #333;
@@ -9,44 +9,45 @@ html, body {
 }
 
 header {
-    background: #005A9C; 
+    border: 1px solid red;
+    background: #4bb8c3; 
     color: white;
-    padding-left: 350px;
-    padding-top: 10px;
-    text-align:left;
     font-weight: bold;
     padding-bottom: 30px;
+    position: fixed;
+    top:0;
+    width: 100%;
+    height: 150px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
 }
-
-footer{
-    background: #005A9C;
-    color: white;
-    text-align: center;
-    padding: 10px;
-}
-
-
-h1 {
-    font-size: 4rem;
-    letter-spacing: 10px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+header nav{
+    border: 1px solid blue;
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
+ border: 1px solid red;
+  list-style: none;
 }
-
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+  display: inline;
+  margin: 0 15px;
 }
 
 nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: normal;
+  color: white;
+  text-decoration: none;
+  font-weight: normal;
+position: relative;
 }
+
+header nav ul li a:hover{
+  color: black;
+  text-decoration: underline;
+}
+
+
 
 .rightSide h2 {
     font-size: 2.9rem;
@@ -59,14 +60,12 @@ nav ul li a {
     border-radius: 20px;
 }
 
-
-.profile {
-      /*border: 1px solid red;*/
-    position: absolute;
-    top:70px;
-    right:20vw; 
+.amigosImg{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid black;
 }
-
 .content {
       /*border: 1px solid red;*/
     background: white;
@@ -74,18 +73,20 @@ nav ul li a {
     border-radius: 10px;
     width: 100%;
     max-width: 1200px;
-    height: 800px;
+    height: 700px;
     display: flex;
     flex-direction: row-reverse;
     align-content:baseline;
     justify-content: space-between;
+    margin-top: 200px;
 }
 
 .rightSide{
-      /*border: 1px solid red;*/
-    height: 85%;
+    border: 1px solid red;
+    height: 100%;
     width: 30%;
     justify-items: center;
+    
 }
 
 .msgBox{
@@ -109,13 +110,28 @@ nav ul li a {
 }
 
 .friendsContainer{
-      /*border: 1px solid red;*/
-    height: 70%;
-    width: 80%;
+    border: 1px solid red;
+    height: 500px;
+    width: 250px;
     display: flex;
     flex-direction:column;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
     border-radius: 20px;
     background-color: #f7f7f7;
 }
+.friend{
+border: 1px solid black;
+border-radius: 20px;
+height: 80px;
+width: 90%;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+}
+
+p{
+  padding-right: 30px;
+}
+

@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     let userAmigos = ['Amigo 1', 
-                        'Amigo 2', 
-                        'Amigo 3']
+                      'Amigo 2', 
+                      'Amigo 3']
 
     let Section = document.querySelector('.friendsContainer');
 
@@ -10,8 +10,10 @@ document.addEventListener('DOMContentLoaded', function() {
         Section.innerHTML="";
         amigos.forEach(userAmigos => {
             Section.innerHTML +=
-            `<p>${userAmigos}</p>`;
-            
+            `<div class="friend">
+                <p>${userAmigos}<div class="amigosImg"></div>
+                </p>
+            </div>`;
         });
     }
     

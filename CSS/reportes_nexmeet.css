@@ -1,6 +1,6 @@
 html, body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    background: #f7f7f7;
+    background: #b4b4b4;
     margin: 0;
     padding: 0;
     color: #333;
@@ -9,20 +9,53 @@ html, body {
     height: 100%;
 }
 header {
-    background: #005A9C; 
+    border: 1px solid red;
+    background: #4bb8c3; 
     color: white;
-    padding-left: 350px;
-    padding-top: 10px;
-    text-align:left;
     font-weight: bold;
     padding-bottom: 30px;
+    position: fixed;
+    top:0;
+    width: 100%;
+    height: 150px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
 }
+header nav{
+    border: 1px solid blue;
+}
+
+nav ul {
+ border: 1px solid red;
+  list-style: none;
+}
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: normal;
+position: relative;
+}
+
+header nav ul li a:hover{
+  color: black;
+  text-decoration: underline;
+}
+
 
 footer{
     background: #005A9C;
     color: white;
     text-align: center;
     padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
 
@@ -32,24 +65,11 @@ h1 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
+
+nav ul li a:hover{
+    color: black;
+    text-decoration: underline;
 }
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: normal;
-
-}
-
-
 
 #userReports ul{
       /*border: 1px solid red;*/
@@ -64,7 +84,7 @@ nav ul li a {
     margin: 50px;
     border: 1px solid black;
     border-radius: 15px;
-    background-color:#c0c0c0;
+    background-color:#ffffff;
     text-align:left;
     height: 40px;
     font-family:'Courier New', Courier, monospace; 
@@ -101,20 +121,15 @@ nav ul li a {
 }
 
 
-.profile {
-    position: absolute;
-    top:70px;
-    right:20vw; 
-}
-
 .content {
+    margin-top: 250px;
     flex: 1;
     display: flex;
 }
 
 .leftNav{
       /*border: 1px solid red;*/
-    height: 100vh;
+    height: 50%;
     width: 20%;
     padding: 30px;
     align-items: center;
@@ -123,5 +138,5 @@ nav ul li a {
 .rightContainer{
       /*border: 1px solid red;*/
     width: 100%;
-    height: 100vh;
+    height: 100%;
 }

@@ -18,10 +18,6 @@
                     <li><a href="reportes.html">Reportes</a></li>
                 </ul>
             </nav>
-            <div class="profile">
-                <p id="name">Nombre completo</p>
-                <p id="user">Nombre Usuario</p>
-            </div>
         </header>
 
         <div id="allPage">
@@ -41,7 +37,9 @@
                 <section id="publicar">
                     <form class="shareBox">
                         <h2>Comparte tu evento</h2>
-                        <input type="text" class="shareText">
+                        <input type="text" id="shareText">
+                        <input type="text" id="shareDesc">
+                        <input type="image" id="shareImg">
                         <nav>
                             <ul>
                                 <li><button type="button" class="shareButton"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-paperclip" viewBox="0 0 16 16">
@@ -62,8 +60,9 @@
             
                 <section id="sugeridos">
                     <h2>Para ti</h2>
-                    <div class="eventos" id="eventos-sugeridos">
-                        <!-- Aquí se cargarán eventos dinámicamente -->
+                    <div class="eventosCompartidos" id="eventos-sugeridos">
+                        <h2>Evento 1</h2>
+                        <p>El evento estuvo poca madre</p>
                     </div>
                 </section>
     

@@ -1,6 +1,6 @@
 html{
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    background: #f7f7f7;
+    background: #8b8b8b;
     margin: 0;
     padding: 0;
     color: #333;
@@ -11,7 +11,7 @@ html{
 
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    background: #f7f7f7;
+    background: #8b8b8b;
     margin: 0;
     padding: 0;
     color: #333;
@@ -26,6 +26,7 @@ body {
     flex-direction: row-reverse;
     justify-content: space-around;
     align-items: flex-start;
+    margin-top: 200px;
 }
 
 #bodyRightSide {
@@ -41,14 +42,55 @@ body {
 
 
 header {
-    background: #005A9C; 
+    border: 1px solid red;
+    background: #4bb8c3; 
     color: white;
-    padding-left: 350px;
-    padding-top: 10px;
-    text-align:left;
     font-weight: bold;
     padding-bottom: 30px;
-    height: px;
+    position: fixed;
+    top:0;
+    width: 100%;
+    height: 150px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+header nav{
+    border: 1px solid blue;
+}
+
+nav ul {
+ border: 1px solid red;
+  list-style: none;
+}
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: normal;
+position: relative;
+}
+
+header nav ul li a:hover{
+  color: black;
+  text-decoration: underline;
+}
+
+
+header.sticky {
+    padding: 15px 20px;
+    background: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    height: 100px;
+    transition: height 0.2s ease-in-out;
+    color: #4bb8c3;
+}
+header.sticky nav ul li a {
+    color: #4bb8c3;
 }
 
 footer{
@@ -58,24 +100,6 @@ footer{
     padding: 10px;
 }
 
-
-nav ul {
-      /*border: 1px solid red;*/
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: normal;
-
-}
 
 h1 {
     font-size: 4rem;
@@ -104,12 +128,12 @@ h1 {
     text-align: right;
     height: 30px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
 #publicar{
-      /*border: 1px solid red;*/
+    border: 1px solid rgb(153, 153, 153);
     padding: 20px;
     background: white;
     border-radius: 10px;
@@ -125,19 +149,31 @@ h1 {
 .shareBox{
       /*border: 1px solid red;*/
     width: 90%;
-    height: 90%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.shareText{
+#shareText{
+    border: 1px solid black;
     border-radius: 10px;
     background-color: rgb(228, 228, 228);
-    height: 60%;
-    border: none;
+    height: 40%;
 }
 
+#shareDesc{
+    height: 100%;
+    border-radius: 10px;
+    background-color: rgb(228, 228, 228);
+}
+#shareImg{
+    text-align: center;
+    height: 40%;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: rgb(228, 228, 228);
+}
 
 #intereses h2, #sugeridos h2, #feed h2, #publicar h2 {
     font-size: 1.8rem;
@@ -145,13 +181,6 @@ h1 {
     margin-bottom: 15px;
 }
 
-
-.profile {
-      /*border: 1px solid red;*/
-    position: absolute;
-    top:70px;
-    right:20vw; 
-}
 
 .content {
     flex:1;
@@ -167,7 +196,7 @@ h1 {
 
 
 .tag, .tagPublicar, .shareButton {
-    background: #005A9C;
+    background: #4bb8c3;
     color: white;
     border: none;
     padding: 10px 15px;
@@ -186,6 +215,7 @@ h1 {
     background: white;
     border-radius: 10px;
     width: 250px;
+    height: 100%;
     max-height: 1200px;
 }
 
@@ -194,6 +224,15 @@ h1 {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: space-between;
+}
+
+.eventosCompartidos{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 .evento {
