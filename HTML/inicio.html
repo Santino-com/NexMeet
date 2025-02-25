@@ -37,17 +37,12 @@
                 <section id="publicar">
                     <form class="shareBox">
                         <h2>Comparte tu evento</h2>
-                        <input type="text" id="shareText">
-                        <input type="text" id="shareDesc">
-                        <input type="image" id="shareImg">
+                        <input type="text" id="shareText" placeholder="¿Qué evento quieres compartir?">
+                        <input type="text" id="shareDesc" placeholder="Descripción del evento">
                         <nav>
                             <ul>
-                                <li><button type="button" class="shareButton"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-paperclip" viewBox="0 0 16 16">
-                                    <path d="M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0z"/>
-                                  </svg></button></li>
-                                <li><button type="button" class="shareButton"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
-                                    <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/>
-                                  </svg></button></li>
+                                <li><input type="image" class="shareButton"></input></li>
+                                <li><input type="date" class="shareButton"></input></li>
                             </ul>
                         </nav>
                     </form>
@@ -61,8 +56,27 @@
                 <section id="sugeridos">
                     <h2>Para ti</h2>
                     <div class="eventosCompartidos" id="eventos-sugeridos">
-                        <h2>Evento 1</h2>
-                        <p>El evento estuvo poca madre</p>
+                        <button class="perfilEventoCompartido"><div> </div></button>
+                        <div class="imagenEventoCompartido"></div>
+                        <div class="contenidoEvento">
+                            <h2>Evento 1</h2>
+                            <p>El evento estuvo poca madre</p>
+                            <div class="botonesEvento">
+                                <button class="btn-like">Me gusta</button>
+                                <button class="btn-comentario">Comentar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="eventosCompartidos" id="eventos-sugeridos">
+                        <button class="perfilEventoCompartido"><div> </div></button>
+                        <div class="imagenEventoCompartido"></div>
+                        <div class="contenidoEvento">
+                            <h2>Evento 2</h2>
+                            <p>El evento estuvo horrible</p>
+                            <div class="botonesEvento">
+                                <button class="btn-like">Me gusta</button>
+                                <button class="btn-comentario">Comentar</button>
+                            </div>
                     </div>
                 </section>
 
@@ -71,7 +85,7 @@
                     <div class="perfilImg">
 
                     </div>
-                    <p>Nombre: <span id="nombrePerfil">Nombre</span></p>
+                    <p>Nombre: <span id="nombrePerfil">Santiago Troconis</span></p>
                 </section>
     
        

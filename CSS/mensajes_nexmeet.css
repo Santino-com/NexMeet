@@ -1,6 +1,6 @@
 html, body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    background: #b4b4b4;
+    font-family:'Courier New', Courier, monospace;
+    background: #4bb8c3;
     margin: 0;
     padding: 0;
     color: #333;
@@ -9,19 +9,38 @@ html, body {
 }
 
 header {
-    border: 1px solid red;
+  border: 1px solid red;
     background: #4bb8c3; 
     color: white;
     font-weight: bold;
-    padding-bottom: 30px;
-    position: fixed;
-    top:0;
     width: 100%;
-    height: 150px;
+    height: 180px;
     display:flex;
     justify-content: space-around;
     align-items: center;
 }
+
+h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  letter-spacing: 5px;
+  font-family:'Courier New', Courier, monospace
+}
+
+.content {
+      /*border: 1px solid red;*/
+    background: white;
+    margin: 20px auto;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 1200px;
+    height: 700px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-content:baseline;
+    justify-content: space-between;
+}
+
 header nav{
     border: 1px solid blue;
 }
@@ -48,6 +67,12 @@ header nav ul li a:hover{
 }
 
 
+.rightSide{
+    height: 100%;
+    width: 30%;
+    justify-items: center;
+    
+}
 
 .rightSide h2 {
     font-size: 2.9rem;
@@ -55,42 +80,42 @@ header nav ul li a:hover{
 }
 
 #msgText{
+    border: none;
+    background-color:#eeeeee;
     height: 45px;
     width: 90%;
     border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#enviar{
+    font-family:'Courier New', Courier, monospace;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    align-self: flex-end;
+    margin-right:30px;
+    background: #ddd;
+    padding: 8px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#enviar:hover{
+  background: #003F6C;
+  color: white;
 }
 
 .amigosImg{
     height: 50px;
     width: 50px;
     border-radius: 50%;
-    border: 1px solid black;
-}
-.content {
-      /*border: 1px solid red;*/
-    background: white;
-    margin: 20px auto;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 1200px;
-    height: 700px;
-    display: flex;
-    flex-direction: row-reverse;
-    align-content:baseline;
-    justify-content: space-between;
-    margin-top: 200px;
 }
 
-.rightSide{
-    border: 1px solid red;
-    height: 100%;
-    width: 30%;
-    justify-items: center;
-    
-}
 
 .msgBox{
-      /*border: 1px solid red;*/
     height: 90%;
     width: 80%;
     display: flex;
@@ -101,16 +126,41 @@ header nav ul li a:hover{
     padding-bottom: 50px;
 }
 
-.textMsg{
-      /*border: 1px solid red;*/
-    height: 90%;
-    width: 90%;
-    background: #f7f7f7;
-    border-radius: 30px;
+.textMsg {
+  height: 80%;
+  width: 90%;
+  background: #f7f7f7;
+  border-radius: 30px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow-y: auto; 
 }
 
+.mensaje {
+  max-width: 70%;
+  padding: 8px 12px;
+  border-radius: 15px;
+  font-size: 14px;
+  word-wrap: break-word;
+}
+
+.mensaje-usuario {
+  align-self: flex-end;
+  background: #4CAF50;
+  color: white;
+}
+
+.mensaje-contacto {
+  align-self: flex-start;
+  background: #e0e0e0;
+  color: black;
+}
+
+
+
 .friendsContainer{
-    border: 1px solid red;
     height: 500px;
     width: 250px;
     display: flex;
@@ -119,16 +169,18 @@ header nav ul li a:hover{
     align-items: center;
     border-radius: 20px;
     background-color: #f7f7f7;
+    gap:10px;
 }
 .friend{
-border: 1px solid black;
-border-radius: 20px;
-height: 80px;
-width: 90%;
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.384);
+  box-shadow: 2px 1px 2px 2px #858585;
+  border-radius: 20px;
+  height: 80px;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 p{
