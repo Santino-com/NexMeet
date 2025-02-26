@@ -4,7 +4,9 @@ document.addEventListener("DOMContentLoaded", function () {
         { id: 2, categoria: "musica", titulo: "Concierto Rock", img: "../IMG/musica.jpg" },
         { id: 3, categoria: "arte", titulo: "Exposición de Arte", img: "../IMG/arte.jpg" }
     ];
-
+    let openInfoEquipo = document.getElementById(`btnMasInfo`);
+    let infoEquipo = document.getElementById("infoEvento");
+    let closeInfoEquipo = document.getElementById("cerrarInfoEvento");
     const eventosFeed = document.getElementById("eventos-feed");
     const tags = document.querySelectorAll(".tag");
 
@@ -22,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Filtros según la categoría seleccionada
+    /*
     tags.forEach(tag => {
         tag.addEventListener("click", function () {
             const categoria = tag.dataset.category;
@@ -29,12 +32,11 @@ document.addEventListener("DOMContentLoaded", function () {
             cargarEventos(eventosFiltrados);
             
         });
-    });
+    }); 
 
 
-
-    // Mostrar sugerencias dinámicamente (se cambia cada 5 segundos)
-    /*function mostrarSugerencias() {
+    Mostrar sugerencias dinámicamente (se cambia cada 5 segundos)
+    function mostrarSugerencias() {
         eventosSugeridos.innerHTML = "";
         const eventoAleatorio = eventos[Math.floor(Math.random() * eventos.length)];
         eventosSugeridos.innerHTML += `
@@ -49,9 +51,25 @@ document.addEventListener("DOMContentLoaded", function () {
     // Cargar eventos al inicio
     cargarEventos(eventos);
     //mostrarSugerencias();
+
+    openInfoEquipo.addEventListener('click', function () {
+        infoEquipo.classList.add('open');
+    });
+    
+    closeInfoEquipo.addEventListener('click', function () {
+        infoEquipo.classList.remove('open');
+    });
+    
+
+
+
 });
+
+
+
 
 window.addEventListener("scroll", function () {
     let header = document.querySelector("header");
     header.classList.toggle("sticky", window.scrollY > 0);
 });
+

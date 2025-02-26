@@ -14,30 +14,58 @@
                 <li><a href="inicio.html">Inicio</a></li>
                 <li><a href="mensajes.html">Mensajes</a></li>
                 <li><a href="miPerfil.html">Mi Perfil</a></li>
-                <li><a href="reportes.html">Reportes</a></li>
+                <li><a href="reportes.html">Administrador</a></li>
             </ul>
         </nav>
     </header>
     <div class="content">
-
-            <div class="rightSide">
-       
-                    <h2>Chats</h2>
-                    <div class="friendsContainer">
-                        <div class="friend">
-
-                        </div>
-                    </div>
+        <div class="rightSide">
+            <h2>Chats</h2>
+            <div class="friendsContainer">
+                
             </div>
-            <form action="" class="msgBox">
-                <div class="textMsg">
-                    <div class="mensaje mensaje-usuario">Hola, ¿cómo estás?</div>
-                    <div class="mensaje mensaje-contacto">¡Hola! Todo bien, ¿y tú?</div>
-                </div>
-                <input type="text" id="msgText" placeholder="Escribe un mensaje"><button type="button" id="enviar">Enviar</button></input>
-            </form>
+        </div>
+
+        <form action="" class="msgBox">
+            <div class="textMsg">
+                <div class="mensaje mensajeUsuario">Hola, ¿cómo estás?</div>
+                <div class="mensaje mensajeContacto">¡Hola! Todo bien, ¿y tú?</div>
+            </div>
+            <input type="text" id="msgText" placeholder="Escribe un mensaje"><button type="button" id="enviar">Enviar</button></input>
+       </form>
     </div>
 
+    <div class="leftContainer">
+        <div class="searchSection">
+            <input type="email" id="searchEmail" placeholder="Ingresar correo">
+            <button id="searchBtn">Enviar Solicitud</button>
+        </div>
+
+        <div class="requestsSection">
+            <h3>Solicitudes</h3>
+            <div class="request">
+                <p>usuario1@email.com</p>
+                <div class="requestButtons">
+                    <button class="acceptBtn">Aceptar</button>
+                    <button class="rejectBtn">Rechazar</button>
+                </div>
+            </div>
+            <div class="request">
+                <p>usuario2@email.com</p>
+                <div class="requestButtons">
+                    <button class="acceptBtn">Aceptar</button>
+                    <button class="rejectBtn">Rechazar</button>
+                </div>
+            </div>
+        </div> 
+    </div>
+
+    <section class="friendTemplate" id="friendTemplate">
+        <div class="innerFriendInfo" id="innerFriendInfo">
+
+            <button type="button" class="closeInnerFriend" id="closeInnerFriend">X</button>
+        </div>
+    </section>
     <footer>
         <h3>Gracias por visitar nuestra pagina</h3>
         <p>Todos los derechos reservados</p>

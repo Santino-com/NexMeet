@@ -15,7 +15,7 @@
                     <li><a href="inicio.html">Inicio</a></li>
                     <li><a href="mensajes.html">Mensajes</a></li>
                     <li><a href="miPerfil.html">Mi Perfil</a></li>
-                    <li><a href="reportes.html">Reportes</a></li>
+                    <li><a href="reportes.html">Administrador</a></li>
                 </ul>
             </nav>
         </header>
@@ -39,6 +39,16 @@
                         <h2>Comparte tu evento</h2>
                         <input type="text" id="shareText" placeholder="¿Qué evento quieres compartir?">
                         <input type="text" id="shareDesc" placeholder="Descripción del evento">
+                        <input type="text" id="shareLoc" placeholder="Coordenadas del evento">
+                        <label for="preferencias">Categoria:</label>
+                        <select id="shareCategory">
+                            <option value="deportes">Deportes</option>
+                            <option value="musica">Musica</option>
+                            <option value="arte">Arte</option>
+                            <option value="tecnologia">Tecnologia</option>
+                            <option value="gastronomia">Gastronomia</option>
+                            <option value="viajes">Viajes</option>
+                        </select>
                         <nav>
                             <ul>
                                 <li><input type="image" class="shareButton"></input></li>
@@ -55,27 +65,29 @@
             
                 <section id="sugeridos">
                     <h2>Para ti</h2>
-                    <div class="eventosCompartidos" id="eventos-sugeridos">
+                    <div class="eventosCompartidos" id="eventosSugeridos">
                         <button class="perfilEventoCompartido"><div> </div></button>
                         <div class="imagenEventoCompartido"></div>
                         <div class="contenidoEvento">
                             <h2>Evento 1</h2>
                             <p>El evento estuvo poca madre</p>
                             <div class="botonesEvento">
-                                <button class="btn-like">Me gusta</button>
-                                <button class="btn-comentario">Comentar</button>
+                                <button class="btnLike">Me gusta</button>
+                                <button type="button" id="btnMasInfo">Mas info</button>
+                                <button class="btnAsistir">Asistir</button>    
                             </div>
                         </div>
                     </div>
-                    <div class="eventosCompartidos" id="eventos-sugeridos">
+                    <div class="eventosCompartidos" id="eventosSugeridos">
                         <button class="perfilEventoCompartido"><div> </div></button>
                         <div class="imagenEventoCompartido"></div>
                         <div class="contenidoEvento">
                             <h2>Evento 2</h2>
                             <p>El evento estuvo horrible</p>
                             <div class="botonesEvento">
-                                <button class="btn-like">Me gusta</button>
-                                <button class="btn-comentario">Comentar</button>
+                                <button class="btnLike">Me gusta</button>
+                                <button type="button" id="btnMasInfo">Mas info</button>
+                                <button class="btnAsistir">Asistir</button>    
                             </div>
                     </div>
                 </section>
@@ -91,7 +103,7 @@
        
             </section>
             <section id="feed">
-                <h2>Próximos eventos</h2>
+                <h2>Tus eventos</h2>
                 <div class="eventos" id="eventos-feed">
                     <!-- Aquí se insertarán eventos dinámicamente -->
                 </div>
@@ -105,6 +117,13 @@
         </footer>
     
 
+    </section>
+
+    <section class="infoEvento" id="infoEvento">
+        <div class="innerEvento" id="innnerEvento">
+
+            <button id="cerrarInfoEvento">X</button>
+        </div>
     </section>
 
     <script src="../JS/home_nexmeet.js"></script>
