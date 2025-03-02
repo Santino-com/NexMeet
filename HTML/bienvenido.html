@@ -11,13 +11,37 @@
         <h1>Bienvenido a NexMeet</h1>
         <p>Inicia sesión para continuar</p>
         <form id="login-form">
-            <input type="text" id="username" placeholder="Usuario o correo" >
-            <input type="password" id="password" placeholder="Contraseña" >
-            <a href="../HTML/inicio.html"><button type="button">Iniciar Sesión</button></a>
+            <input type="text" id="username" placeholder="Usuario o correo" value="">
+            <input type="password" id="password" placeholder="Contraseña" value="">
+            <button type="submit">Iniciar Sesión</button>
         </form>
         <p class="register-link">¿No tienes cuenta? <a href="../HTML/registro.html">Regístrate</a></p>
     </div>
 
-    <script src="js/script.js"></script>
+    <script>
+        const sumbitBtn = document.querySelector('form');
+        
+        sumbitBtn.addEventListener('submit', e=> {
+            let errores =[];
+            e.preventDefault();
+
+            const userName = document.getElementById('username');
+            const password = document.getElementById('password');
+
+            if(userName.value==="")
+                errores.push('Ingresa un usuario, no seas puto');
+
+            if(password.value==="" || !password.value.includes('S'))
+                errores.push('La estas cagando en la contra papi');
+
+            if (errores.length > 0) {
+            alert(errores.join("\n"));
+            return;
+            }
+
+            window.location.href = "../HTML/inicio.html";
+        });
+
+    </script>
 </body>
 </html>

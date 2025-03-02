@@ -46,6 +46,13 @@
         <p>Todos los derechos reservados</p>
     </footer>
 
+    <section class="editarPerfilContainer" id="editarPerfilContainer">
+        <div class="innerEditarPerfil">
+
+            <button type="button" id="closeEditarPerfil">X</button>
+        </div>
+    </section>
+
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         let userComments = ['Que evento tan mas padre y completo', 
@@ -79,9 +86,23 @@
 
         cargarAmigos(userFriends);
         cargarComentarios(userComments);
-        
+    });
 
+    const editarPerfil = document.getElementById('editProfile');
+    const editarPerfilContainer = document.getElementById('editarPerfilContainer')
+    const closeEditarPerfil = document.getElementById('closeEditarPerfil');
+    
+    editarPerfil.addEventListener('click', ()=>{
+        editarPerfilContainer.classList.add('open');
     })
+    closeEditarPerfil.addEventListener('click', ()=>{
+        editarPerfilContainer.classList.remove('open');
+    })
+
+    editarPerfilContainer.addEventListener('click', ()=>{
+        editarPerfilContainer.classList.remove('open');
+    })
+    
 </script>
 </body>
 </html>

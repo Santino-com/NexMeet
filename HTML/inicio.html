@@ -35,11 +35,11 @@
                 </section>
         
                 <section id="publicar">
-                    <form class="shareBox">
+                    <form class="shareBox" id="shareBox">
                         <h2>Comparte tu evento</h2>
-                        <input type="text" id="shareText" placeholder="¿Qué evento quieres compartir?">
-                        <input type="text" id="shareDesc" placeholder="Descripción del evento">
-                        <input type="text" id="shareLoc" placeholder="Coordenadas del evento">
+                        <input type="text" id="shareText" placeholder="¿Qué evento quieres compartir?" value="" >
+                        <input type="text" id="shareDesc" placeholder="Descripción del evento" value="" >
+                        <input type="text" id="shareLoc" placeholder="Coordenadas del evento" value="" >
                         <label for="preferencias">Categoria:</label>
                         <select id="shareCategory">
                             <option value="deportes">Deportes</option>
@@ -51,15 +51,18 @@
                         </select>
                         <nav>
                             <ul>
-                                <li><input type="image" class="shareButton"></input></li>
+                                <li><input type="file" class="shareButton" id="fotoEvento" accept="image/*"></input></li>
                                 <li><input type="date" class="shareButton"></input></li>
                             </ul>
                         </nav>
+
+                        <button type="submit" class="tagPublicar">Publicar &emsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-upload" viewBox="0 0 16 16">
+                            <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+                            <path d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708z"/>
+                          </svg></button>
+
                     </form>
-                    <button class="tagPublicar"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-upload" viewBox="0 0 16 16">
-                        <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
-                        <path d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708z"/>
-                      </svg></button>
+
         
                 </section>
             
@@ -104,11 +107,7 @@
             </section>
             <section id="feed">
                 <h2>Tus eventos</h2>
-                <div class="eventos" id="eventos-feed">
-                    <script>
-                        cargarEventos(eventos);
-                    </script>
-                </div>
+                <div class="eventos" id="eventos-feed"></div>
             </section>
 
         </div>
@@ -153,18 +152,6 @@
                 });
             }
 
-            // Filtros según la categoría seleccionada
-            /*
-            tags.forEach(tag => {
-                tag.addEventListener("click", function () {
-                    const categoria = tag.dataset.category;
-                    const eventosFiltrados = eventos.filter(e => e.categoria === categoria);
-                    cargarEventos(eventosFiltrados);
-                    
-                });
-            }); 
-            */
-
             cargarEventos(eventos);
 
             openInfoEquipo.addEventListener('click', function () {
@@ -174,6 +161,10 @@
             closeInfoEquipo.addEventListener('click', function () {
                 infoEquipo.classList.remove('open');
             });
+
+            infoEquipo.addEventListener('click', ()=>{
+                infoEquipo.classList.remove('open');
+            });
             
         });
 
@@ -181,6 +172,36 @@
             let header = document.querySelector("header");
             header.classList.toggle("sticky", window.scrollY > 0);
         });
+
+        // const eventoImg = document.getElementById('fotoEvento');
+        // eventoImg.addEventListener('change', e=>{
+        //     console.log(e.srcElement.files);
+        // });
+
+
+        document.getElementById('shareBox').addEventListener('submit', e=>{
+            let errores=[];
+            e.preventDefault();
+            
+            const tittle = document.getElementById('shareText');
+            const description = document.getElementById('shareDesc');
+            const location = document.getElementById('shareLoc');
+
+
+            if(tittle.value==='')
+                errores.push('Te falto el nombre del evento papi');
+
+            if(description.value.trim()==='')
+                errores.push('la estas cagando con la descripcion')
+
+            if(location.value==='')
+                errores.push('Te falto ponder donde vrgs va a ser el evento')
+
+
+            if(errores.length!==0)
+                alert(errores.join('\n'))
+            console.log("Hola Puta")
+        })
     </script>
 </body>
 </html>

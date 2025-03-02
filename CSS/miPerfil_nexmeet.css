@@ -57,7 +57,6 @@ h1 {
 
 
 #content {
-    border: 1px solid red;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -77,7 +76,6 @@ h1 {
     justify-content: space-around;
     text-align: center;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    border: 1px solid red;
 }
 
 
@@ -105,7 +103,6 @@ h1 {
 }
 
 .userContainer{
-    border: 1px solid red;
     background: #f5f5f5;
     display: flex;
     flex-direction: column;
@@ -127,9 +124,9 @@ h1 {
 }
 
 .userImg{
-    height: 40%;
+    height: 55%;
     width: 60%;
-    border-radius: 50px;
+    border-radius: 50%;
     background-image: url(../IMG/viajes.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -138,6 +135,7 @@ h1 {
 }
 
 .userImg:hover{
+    border-radius:40px;
     transform: scale(1.1);
 }
 
@@ -153,6 +151,50 @@ h1 {
 
 #editProfile:hover{
     background: #003F6C;
+    color: white;
+}
+
+.editarPerfilContainer{
+    opacity: 0;
+    z-index: -1;
+    position:fixed;
+    height:100vh;
+    width:100vw;
+    background-color:#00000094;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.editarPerfilContainer.open{
+    opacity: 1;
+    z-index:1;
+}
+
+.innerEditarPerfil{
+    height:80%;
+    width:50%;
+    background-color:#ffffff;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding:20px;
+    border-radius:20px;
+}
+
+#closeEditarPerfil{
+    align-self:flex-start;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background: white;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+#closeEditarPerfil:hover{
+    background: #ff0000;
     color: white;
 }
 

@@ -18,6 +18,33 @@
         <p class="login-link">¿Ya tienes cuenta? <a href="../HTML/bienvenido.html">Iniciar Sesión</a></p>
     </div>
 
-    <script src="../JS/script.js"></script>
+    <script>
+        const sumbitBtn = document.querySelector('form');
+        
+        sumbitBtn.addEventListener('submit', function(e) {
+            let errores =[];
+            e.preventDefault();
+
+            const userName = document.getElementById('username');
+            const password = document.getElementById('password');
+            const correo = document.getElementById('new-email');
+
+            if(!correo.value.includes('@') || correo.value==='')
+                errores.push('e joto, el correo ta mal wee, pongase vrg')
+
+            if(userName.value==="")
+                errores.push('Ingresa un usuario, no seas puto');
+
+            if(password.value==="" || !password.value.includes('S'))
+                errores.push('La estas cagando en la contra papi');
+
+            if (errores.length > 0) {
+            alert(errores.join("\n"));
+            return;
+            }
+
+            window.location.href = "../HTML/bienvenido.html";
+        });
+    </script>
 </body>
 </html>
