@@ -121,9 +121,46 @@
     </section>
 
     <section class="infoEvento" id="infoEvento">
-        <div class="innerEvento" id="innnerEvento">
-
+        <div class="innerEvento" id="innerEvento">
             <button id="cerrarInfoEvento">X</button>
+    
+            <div class="eventoContent">
+
+                <h2 class="eventoTitulo">Evento 1</h2>
+                <p class="eventoDescripcion">El evento estuvo poca madre</p>
+    
+                <div class="eventoUbicacion">
+                    <h3>Ubicación</h3>
+                    <div id="mapa"> </div>
+                </div>
+    
+                <div class="eventoPerfil">
+                    <h3>Perfil del Organizador</h3>
+                    <p>Nombre del organizador: <span id="nombreOrganizador">Juan Pérez</span></p>
+                </div>
+    
+                <div class="eventoCupo">
+                    <h3>Detalles del Evento</h3>
+                    <p>Cupo máximo: <span id="cupoMaximo">50 personas</span></p>
+                    <p>Me gusta: <span id="meGusta">120</span></p>
+                </div>
+    
+                <div class="eventoComentarios">
+                    <h3>Comentarios</h3>
+                    <div id="comentarios">
+                        <div class="comentario">
+                            <p><strong>Juan Pérez:</strong> ¡Este evento está increíble!</p>
+                        </div>
+                        <div class="comentario">
+                            <p><strong>Ana López:</strong> Alch mejor nadota, no es de ahuevo hacer un evento e, alch mejor quedense en su casa</p>
+                        </div>
+                    </div>
+                    <div class="formComentario">
+                        <input type="text" id="nuevoComentario" placeholder="Escribe un comentario..."></input>
+                        <button id="enviarComentario">Comentar</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -162,9 +199,9 @@
                 infoEquipo.classList.remove('open');
             });
 
-            infoEquipo.addEventListener('click', ()=>{
-                infoEquipo.classList.remove('open');
-            });
+            // infoEquipo.addEventListener('click', ()=>{
+            //     infoEquipo.classList.remove('open');
+            // });
             
         });
 

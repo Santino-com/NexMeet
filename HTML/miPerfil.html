@@ -20,7 +20,7 @@
     </header>
     <div id="content">
         <section class="userContainer">
-            <h2>Hola</h2>
+            <h2>Hola <span id="nameDisplay">Santiago</span></h2>
             <div class="userImg"></div>
             <p class="userInfo" id="nombre">Santiago Troconis</p>
             <p class="userInfo" id="correo">tony_0703@hotmail.com</p>
@@ -48,26 +48,46 @@
 
     <section class="editarPerfilContainer" id="editarPerfilContainer">
         <div class="innerEditarPerfil">
-
+            <h2>Editar Perfil</h2>
             <button type="button" id="closeEditarPerfil">X</button>
+
+            <div class="editarPerfilContent">
+                <div class="profilePicContainer">
+                    <img src="ruta_de_la_foto.jpg" alt="Foto de perfil" id="profilePic">
+                    <input type="file" id="changeProfilePic" accept="image/*">
+                </div>
+
+                <label for="editName">Nombre:</label>
+                <input type="text" id="editName" value="Santiago Troconis">
+
+                <label for="editEmail">Correo:</label>
+                <input type="email" id="editEmail" value="tony_0703@hotmail.com">
+
+                <label for="editDescription">Descripción:</label>
+                <textarea id="editDescription" placeholder="Escribe algo sobre ti..."></textarea>
+
+                <label for="editBirthdate">Fecha de nacimiento:</label>
+                <input type="date" id="editBirthdate">
+
+                <button class="button" id="saveProfile">Guardar</button>
+                <button class="button" id="cancelProfile">Cancelar</button>
+            </div>
         </div>
     </section>
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        let userComments = ['Que evento tan mas padre y completo', 
-                            'No recomiendo, el evento no cumple lo q dice', 
-                            'Me quedaba super lejos']
+        let userComments = ['Evento 1, Chupar culos', 
+                            'Evento 2, Llorar toda la noche', 
+                            'Evento 3, Cantar canciones de señoras dolidas'];
 
         let commentsSection = document.querySelector('.comments');
 
         function cargarComentarios(comentarios)
         {
-            commentsSection.innerHTML="";
-            comentarios.forEach(userComments => {
-                commentsSection.innerHTML +=
-                `<li>${userComments}</li>`;
-                
+            commentsSection.innerHTML = "";
+            comentarios.forEach(comment => {
+                commentsSection.innerHTML += `<li>${comment}</li>`;
             });
         }
 
@@ -76,33 +96,44 @@
 
         function cargarAmigos(amigos)
         {
-            friendsSection.innerHTML="";
-            amigos.forEach(userFriends => {
-                friendsSection.innerHTML +=
-                `<li>${userFriends}</li>`;
-                
+            friendsSection.innerHTML = "";
+            amigos.forEach(friend => {
+                friendsSection.innerHTML += `<li>${friend}</li>`;
             });
         }
 
         cargarAmigos(userFriends);
         cargarComentarios(userComments);
+
+        // Referencias a los elementos del DOM
+        const editarPerfil = document.getElementById('editProfile');
+        const editarPerfilContainer = document.getElementById('editarPerfilContainer');
+        const closeEditarPerfil = document.getElementById('closeEditarPerfil');
+        const cancelarPerfil = document.getElementById('cancelProfile');
+        
+        editarPerfil.addEventListener('click', ()=>{
+            editarPerfilContainer.classList.add('open');
+        });
+
+        closeEditarPerfil.addEventListener('click', ()=>{
+            editarPerfilContainer.classList.remove('open');
+        });
+
+        editarPerfilContainer.addEventListener('click', (event) => {
+            if (event.target === editarPerfilContainer) {
+                editarPerfilContainer.classList.remove('open');
+            }
+        });
+
+        const modalContent = document.querySelector('.innerEditarPerfil');
+        modalContent.addEventListener('click', (event) => {
+            event.stopPropagation();  
+        });
+
+        cancelarPerfil.addEventListener('click', ()=>{
+            editarPerfilContainer.classList.remove('open');
+        });
     });
-
-    const editarPerfil = document.getElementById('editProfile');
-    const editarPerfilContainer = document.getElementById('editarPerfilContainer')
-    const closeEditarPerfil = document.getElementById('closeEditarPerfil');
-    
-    editarPerfil.addEventListener('click', ()=>{
-        editarPerfilContainer.classList.add('open');
-    })
-    closeEditarPerfil.addEventListener('click', ()=>{
-        editarPerfilContainer.classList.remove('open');
-    })
-
-    editarPerfilContainer.addEventListener('click', ()=>{
-        editarPerfilContainer.classList.remove('open');
-    })
-    
 </script>
 </body>
 </html>
